@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #content{
+            width: 500px;
+            height: 500px;
+
+        }
+
+    </style>
+    <script src="../js/lib.js"></script>
+    <script>
+        let content
+        let bt
+        let color=["red","orange", "yellow","green", "blue", "navy", "purple"];
+
+        
+
+        function next(){
+            
+            content.style.backgaround=color[1];
+        }
+        function init(){
+            bt=document.querySelector("button");
+            content=document.getElementById("content");
+            content.style.background="red";
+            
+
+
+        }
+        addEventListener("load",function(){
+            init();
+            
+            bt.addEventListener("click", function(){
+                next();
+            });
+        });
+    </script>
+</head>
+<body>
+    <button>Random</button>
+    <input type="checkbox" id="">
+    <div id="content">
+
+    </div>
+</body>
+</html>
